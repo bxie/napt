@@ -50,15 +50,15 @@
                     <div class="container"></div>
                     <div id="exTab2" class="container"> 
                         <ul class="nav nav-tabs">
-                            <li class="active">
+                            <li class="active" id="tab3">
                                 <a href="#1a" data-toggle="tab">Method: 
                                 <div data-silex-type="ctat" class="CTATTextInput" data-ctat-enabled="true" id="method1"></div></a>
                             </li>
-                            <li style="display:none;">
+                            <li id="tab2" style="display:none;">
                                 <a href="#2a" data-toggle="tab">Method:
                                 <div data-silex-type="ctat" class="CTATTextInput" data-ctat-enabled="true" id="method2"></div></a>
                             </li>
-                            <li style="display:none;"><a href="#3a" data-toggle="tab">Method:
+                            <li id="tab3" style="display:none;"><a href="#3a" data-toggle="tab">Method:
                             <div data-silex-type="ctat" class="CTATTextInput" data-ctat-enabled="true" id="method3"></div></a>
                             </li>
                         </ul>
@@ -187,7 +187,6 @@
         </div>
     </div>
 
-
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
@@ -196,23 +195,7 @@
         
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-        <script>
-            editor = ace.edit("editor");
-            // editor.setTheme("ace/theme/monokai");
-            editor.getSession().setMode("ace/mode/java");
-            document.getElementById('editor').style.fontSize='14px';
-            highlight(3);
-
-            function highlight(line)
-            {
-                editor.gotoLine(line, 0, true);
-            }
-
-            function gotoNext(line)
-            {
-                editor.gotoLine(editor.getCursor() + 1, 0, true);
-            }
-        </script>
+        <script src="js/script.js"></script>
 
 </body></html>
 
