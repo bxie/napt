@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Output Prototype</title>
+
+    <!--CTAT required things-->
+    <meta name="generator" content="Silex v2.2.5">
+    <!-- End of generator meta tag -->
+    <!--CSS-->
+    <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/normalize.css" rel="stylesheet">
+    <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/front-end.css" rel="stylesheet">
+    <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.css" rel="stylesheet">
+    <!--JS-->
+    <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery.js"></script>
+    <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery-ui.js"></script>
+    <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
+    <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/ctat/ctat.min.js"></script>
+
+    <style type="text/css" class="silex-style"></style>
+    <!--<link rel="stylesheet" href="output.css">-->
+
+</head>
+<body>
+
+
+Output
+<br>
+<!--Line 1: <div data-silex-type="ctat" class="CTATTextInput editable-style silex-id-1499794633753-0 page-page-1 paged-element CTATComponent" data-ctat-tabindex="1" data-silex-id="silex-id-1499794633753-0" id="n1" data-ctat-component="CTATTextInput" data-ctat-enabled="true"></div>-->
+<div class="outputGroup">
+    <div class="CTATTextField" id="tf_output1">Line 1: </div><div class="outputLine CTATTextInput hidden" id="output1"></div>
+</div>
+
+<br><br>
+
+<div class="outputGroup">
+    <div class="CTATTextField" id="tf_output2">Line 2: </div><div class="outputLine CTATTextInput hidden" id="output2"></div>
+</div>
+
+<br/> <br/>
+
+<div class="outputGroup">
+    <div class="CTATTextField" id="tf_output3">Line 3: </div><div class="outputLine CTATTextInput hidden" id="output3"></div>
+</div>
+
+<!--Groupigs-->
+<div id="outputGroup2" class="CTATGroupingComponent"
+     data-ctat-componentlist="tf_output2, output2">
+</div>
+
+<div id="outputGroup3" class="CTATGroupingComponent"
+     data-ctat-componentlist="tf_output3, output3">
+</div>
+
+</body>
+</html>
