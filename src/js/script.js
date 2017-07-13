@@ -1,33 +1,28 @@
-$(document).ready(function () 
+NUM_TABS = 3;
+
+$(document).ready(function ()
 {
-    
-    /*$("#showtab2").click(function () 
-        { 
-            $("#tab2").show();
-            $("#2a").show();
+    // listener for each tab
+    for(let i=1; i<=NUM_TABS; i++){
+        $(`#tab${i}`).click(function ()
+            {
+                console.log(`Clicked method${i}`);
+                showTab(i);
+            }
+        );
+    }
 
-            //$("#1a").hide();
-
-            $("#tab1").removeClass('active');
-            $("#1a").removeClass('active');
-            $("#tab2").addClass('active');
-            $("#2a").addClass('active');
+    // listener for "new method/table" button
+    $("#showtab2").click(function ()
+        {
+            showTab(2);
         }
     );
-
     $("#showtab3").click(function () 
         {
-            $("#tab3").show();
-            $("#3a").show();
-
-            //$("#2a").hide();
-
-            $("#tab2").removeClass('active');
-            $("#2a").removeClass('active');
-            $("#tab3").addClass('active');
-            $("#3a").addClass('active');
+            showTab(3);
         }
-    );*/
+    );
 
     editor = ace.edit("editor");
     //editor.setTheme("ace/theme/monokai");
@@ -38,6 +33,27 @@ $(document).ready(function ()
     highlight(3);
    
 });
+
+// Given a tab number, set that tab (and table) to active and all others inactive
+function showTab(selectedTab, numTabs = NUM_TABS){
+    console.log(`showTab for ${selectedTab}`);
+    for(let i=1; i<=numTabs; i++){
+        if(i == selectedTab){
+            continue;
+        }
+        else{
+            $(`#${i}a`).hide();
+            $(`#tab${i}`).removeClass('active');
+            $(`#${i}a`).removeClass('active');
+        }
+    }
+
+    $(`#tab${selectedTab}`).show();
+    $(`#${selectedTab}a`).show();
+    $(`#tab${selectedTab}`).addClass('active');
+    $(`#${selectedTab}a`).addClass('active');
+
+}
 
 
 function highlight(line)
