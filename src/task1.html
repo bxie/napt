@@ -57,7 +57,7 @@
                                     <div data-silex-type="ctat" class="CTATTextInput" data-ctat-enabled="true" id="method1"></div>
                                 </a>
                             </li>
-                            <li id="tab2" style="display:none;">
+                            <li id="tab2">
                                 <a href="#2a" data-toggle="tab">Method:
                                     <div data-silex-type="ctat" class="CTATTextInput" data-ctat-enabled="true" id="method2"></div>
                                 </a>
@@ -96,9 +96,10 @@
                                         <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="ret1"></div></td>
                                     </tr>
                                 </table> 
-                                <button type="button" class="btn btn-lg btn-default" id="showtab2">New method</button>
+                                <div id="done2" class="CTATButton">Done with table</div>
+                                <button type="button" class="btn btn-sm btn-default" id="showtab2">New method</button>
                             </div>
-                            <div class="tab-pane" id="2a">
+                            <div class="tab-pane" id="2a" style="display:hidden">
                                 <table>
                                     <tr>
                                         <th>Name</th><th>Value</th>
@@ -124,9 +125,10 @@
                                         <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="ret2"></div></td>
                                     </tr>
                                 </table> 
-                                <button type="button" class="btn btn-lg btn-default" id="showtab3">New method</button>
+                                <div id="done2" class="CTATButton">Done with table</div>
+                                <button type="button" class="btn btn-sm btn-default" id="showtab3">New method</button>
                             </div>
-                            <div class="tab-pane" id="3a">
+                            <div class="tab-pane" id="3a" style="display:hidden">
                                 <table>
                                     <tr>
                                         <th>Name</th><th>Value</th>
@@ -152,6 +154,7 @@
                                         <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="ret3"></div></td>
                                     </tr>
                                 </table> 
+                                <div id="done3" class="CTATButton">Done with table</div>
                             </div>
                         </div>
                     </div>

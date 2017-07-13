@@ -1,10 +1,12 @@
 $(document).ready(function () 
 {
     
-    $("#showtab2").click(function () 
+    /*$("#showtab2").click(function () 
         { 
             $("#tab2").show();
             $("#2a").show();
+
+            //$("#1a").hide();
 
             $("#tab1").removeClass('active');
             $("#1a").removeClass('active');
@@ -18,14 +20,14 @@ $(document).ready(function ()
             $("#tab3").show();
             $("#3a").show();
 
-            $("#2a").hide();
+            //$("#2a").hide();
 
             $("#tab2").removeClass('active');
             $("#2a").removeClass('active');
             $("#tab3").addClass('active');
             $("#3a").addClass('active');
         }
-    );
+    );*/
 
     editor = ace.edit("editor");
     //editor.setTheme("ace/theme/monokai");
@@ -47,5 +49,10 @@ function highlight(line)
 function gotoNext(line)
 {
     editor.gotoLine(editor.getCursor() + 1, 0, true);
+}
+
+function tableDone(id)
+{
+    //
 }
 
