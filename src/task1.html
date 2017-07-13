@@ -44,11 +44,37 @@
         </div>
 
         <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div>
+                    Run the code like a computer, fill in the intermediate values for all variables, and enter the output.
+
+                    <br><br>
+                </div>
+
+                <div class="form-group">
+
+                    <div id="editor">public class StrategyPractice {
+    public static void main(String[] args) {
+        int x = 1;
+        int y = 2;
+
+        int z = x;
+        x = y;
+        y = z;
+
+        printSum(x, y);
+        System.out.println("Bye!");
+    }
+
+    public static void printSum(int a, int b) {
+        System.out.println(a + b);
+    }
+}</div>
+                </div>
+            </div>
+
             <div class="col-xs-6 col-md-6">
-                Run the code like a computer, fill in the intermediate values for all variables, and enter the output.
-
-                <br><br>
-
                 <div class="container" style="width:700px; padding: 0px;">
                     <div id="exTab1" class="container" style="padding: 0px"> 
                         <ul class="nav nav-pills">
@@ -188,37 +214,20 @@
                     </div>
                 </div>
             </div>
+            <br/> <br/>
+            <div>
+                <table>
+                    <tr>
+                        <td><div id="hintwindow" class="CTATHintWindow"></div></td>
+                        <td width="80px">
+                            <div data-silex-type="ctat" id="hint" class="CTATHintButton editable-style silex-id-1499794868504-10 CTATComponent" data-silex-id="silex-id-1499794868504-10" data-ctat-component="CTATHintButton" data-ctat-enabled="true"></div>
+                        </td><td width="80px">
+                        <div data-silex-type="ctat" id="done" class="CTATDoneButton editable-style silex-id-1499794862881-9 CTATComponent" data-silex-id="silex-id-1499794862881-9" data-ctat-component="CTATDoneButton" data-ctat-enabled="true"></div>
+                    </td width="280px">
+                    </tr></table>
+            </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-6">
 
-                <div class="form-group">
-
-                    <div id="editor">public class StrategyPractice {
-                        public static void main(String[] args) {
-                        int x = 1;
-                        int y = 2;
-
-                        int z = x;
-                        x = y;
-                        y = z;
-
-                        printSum(x, y);
-                        System.out.println("Bye!");
-                    }
-
-                    public static void printSum(int a, int b) {
-                    System.out.println(a + b);
-                }
-            }
-        </div>
-        <table>
-            <tr><td width="80px">
-                <div data-silex-type="ctat" id="hint" class="CTATHintButton editable-style silex-id-1499794868504-10 CTATComponent" data-silex-id="silex-id-1499794868504-10" data-ctat-component="CTATHintButton" data-ctat-enabled="true"></div>
-            </td><td width="80px">
-            <div data-silex-type="ctat" id="done" class="CTATDoneButton editable-style silex-id-1499794862881-9 CTATComponent" data-silex-id="silex-id-1499794862881-9" data-ctat-component="CTATDoneButton" data-ctat-enabled="true"></div>
-        </td width="280px">
-        <td><div id="hintwindow" class="CTATHintWindow"></div></td>
-    </tr></table>
 </div>       
 </div> 
 </div>
