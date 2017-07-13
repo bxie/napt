@@ -4,14 +4,16 @@ $(document).ready(function ()
     $("#showtab2").click(function () 
         { 
             $("#tab2").show();
-            $("#tab2").addClass('active');
             $("#tab1").removeClass('active');
+            $("#tab2").addClass('active');
         }
     );
 
     $("#showtab3").click(function () 
         { 
             $("#tab3").show(); 
+            $("#tab2").removeClass('active');
+            $("#tab3").addClass('active');
         }
     );
 
