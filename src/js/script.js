@@ -5,24 +5,32 @@ $(document).ready(function ()
     // listener for each tab
     for(let i=1; i<=NUM_TABS; i++){
         $(`#tab${i}`).click(function ()
-            {
-                console.log(`Clicked method${i}`);
-                showTab(i);
-            }
-        );
+        {
+            console.log(`Clicked method${i}`);
+            showTab(i);
+        });
     }
 
     // listener for "new method/table" button
-    $("#showtab2").click(function ()
+    for(let i=1; i<=NUM_TABS-1; i++){
+        $(`#new${i}`).click(function ()
         {
-            showTab(2);
-        }
-    );
-    $("#showtab3").click(function () 
-        {
-            showTab(3);
-        }
-    );
+            console.log(`Clicked #new${i}`);
+            showTab(i+1);
+            $(`#new${i}`).hide();
+        });
+    }
+
+    //listener for done w/ table buttons
+    for(let i=1; i<=NUM_TABS; i++){
+        $(`#done${i}`).click(function () {
+            console.log(`Clicked done${i}`);
+            tableDone(i);
+            if(i>1){
+                showTab(i-1);
+            }
+        });
+    }
 
     editor = ace.edit("editor");
     //editor.setTheme("ace/theme/monokai");
@@ -69,6 +77,9 @@ function gotoNext(line)
 
 function tableDone(id)
 {
-    //
+    $(`#tab${id}`).hide();
+    $(`#${id}a`).hide();
+    $(`#tab${id}`).removeClass('active');
+    $(`#${id}a`).removeClass('active');
 }
 
