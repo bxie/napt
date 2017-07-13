@@ -38,7 +38,11 @@ $(document).ready(function ()
     document.getElementById('editor').style.fontSize = '14px';
     editor.setReadOnly(true);
 
-    highlight(3);
+    //initial state
+    highlight(2);
+    for(var i=2; i<=NUM_TABS; i++){
+        $(`#tab${i}`).hide();
+    }
    
 });
 
