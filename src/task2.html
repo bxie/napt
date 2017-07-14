@@ -14,13 +14,13 @@
   .ace_editor .ace_marker-layer .ace_active-line {background: #2ECC71 !important;}
   .lbutton { height: 18px; font-size: 8px; padding: 0px; }
 
-  .tab-pane {
-    background-color: #bfcdde !important;
-    }
-  .nav>li>a {
-    background-color: #bfcdde !important;
-    color: black;
-    }
+  /*.tab-pane {*/
+    /*background-color: #bfcdde !important;*/
+    /*}*/
+  /*.nav>li>a {*/
+    /*background-color: #bfcdde !important;*/
+    /*color: black;*/
+    /*}*/
 </style>
 
 <!-- Silex -->
@@ -32,6 +32,7 @@
 <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/normalize.css" rel="stylesheet">
 <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/front-end.css" rel="stylesheet">
 <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="style.css">
 <!--JS-->
 <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery.js"></script>
 <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery-ui.js"></script>
@@ -48,15 +49,18 @@
     <div class="container">
 
         <div class="page-header">
-            <h2 style="font-weight: bold">napt (Not Another Programming Tutor)</h2>
-            <h5><small>LearnLab Summerschool 2017, Benjamin & Hieke</small></h5>
+            <h2 style="font-weight: bold">Not Another Programming (NAP) Tutor</h2>
+            <h5><small>LearnLab Summer School 2017,
+                <a href="http://www.benjixie.com" target="_blank">Benjamin Xie</a> &
+                <a href="https://scholar.google.com/citations?user=nB5EHuwAAAAJ" target="_blank">Hieke Keuning</a>
+            </small></h5>
         </div>
 
         <div class="row">
 
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div>
-                <h4>Instructions</h4>
+                <h2>Instructions</h2>
                     Run the code like a computer by:
                     <ul>
                         <li>clicking on an arrow to jump to the next line to be executed</li>
@@ -103,10 +107,10 @@
             </div>
 
             <div class="col-xs-6 col-md-6">
-            <h4>Variables</h4>
                 <div class="container" style="width:600px; padding: 0px;">
+                    <h2>Variable Tables</h2>
                     <div id="exTab1" class="container" style="padding: 0px"> 
-                        <ul class="nav nav-pills">
+                        <ul class="nav nav-tabs">
                             <li class="active tb" id="tab1">
                                 <a href="#1a" data-toggle="tab">Method: 
                                     <div data-silex-type="ctat" class="CTATTextInput" data-ctat-enabled="true" id="method1"></div>
@@ -214,10 +218,12 @@
                             </div>
                         </div>
                     </div>
-                    <br/>
+
+                    <hr/>
+
                     <!--Output-->
                     <div class="output">
-                        <h4>Output</h4>
+                        <h2>Output</h2>
      
                         <div class="outputGroup">
                             <span class="CTATTextField" id="tf_output1">1: </span><div class="outputLine CTATTextInput" id="output1"></div>
@@ -239,11 +245,11 @@
                         <div id="outputGroup3" class="CTATGroupingComponent"
                              data-ctat-componentlist="tf_output3, output3">
                         </div>
+                        <hr/>
                     </div>
                 </div>
 
-                <br>
-                <h4>Hints</h4>
+                <!--<h4>Hints</h4>-->
                 <table>
                     <tr>
                         <td width="250px"><div id="hintwindow" class="CTATHintWindow"></div></td>
