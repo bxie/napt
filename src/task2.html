@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html><head>    
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<style type="text/css" media="screen">
+    #editor { 
+      width: 500px;
+      height:400px;
+  }
+  .page-header { margin-top: 20px;}
+  li, ul {list-style-type: square}
+
+  .ace_editor .ace_marker-layer .ace_active-line {background: #2ECC71 !important;}
+  .lbutton { height: 18px; font-size: 8px; padding: 0px; }
+</style>
+
+<!-- Silex -->
+
+<!-- leave this for stats and Silex version check -->
+<meta name="generator" content="Silex v2.2.5">
+<!-- End of generator meta tag -->
+<!--CSS-->
+<link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/normalize.css" rel="stylesheet">
+<link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/front-end.css" rel="stylesheet">
+<link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.css" rel="stylesheet">
+<!--JS-->
+<script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery.js"></script>
+<script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery-ui.js"></script>
+<script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/releases/latest/ctatloader.js"></script>
+<script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/ctat/ctat.min.js"></script>
+
+<style type="text/css" class="silex-style"></style>
+
+
+</head>
+
+<body class="body-initial prevent-draggable silex-runtime silex-published">
+
+    <div class="container">
+
+        <div class="page-header">
+            <h2 style="font-weight: bold">napt (Not Another Programming Tutor)</h2>
+            <h5><small>LearnLab Summerschool 2017, Benjamin & Hieke</small></h5>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                <div>
+                    Run the code like a computer by:
+                    <ul>
+                        <li>clicking on an arrow to jump to the next line to be executed</li>
+                        <li>filling in the intermediate values for all variables</li>
+                        <li>entering the output</li>
+                    </ul>
+                </div>
+
+                <table>
+                <tr><td style="padding: 0px;line-height: 0px; vertical-align: top">
+                    <div id="lButtons">
+                    <script type="text/javascript">
+                        var nr = 17;
+                        for (var i = 1; i <= nr; i++) 
+                        {
+                            $('#lButtons').append('<div id="l' + i + '" class="CTATButton lbutton"><span class="glyphicon glyphicon-arrow-right"></span></div><br>');
+                        }
+                    </script>
+                    </div>
+                </td>
+                <td>
+                <div class="form-group">
+
+                    <div id="editor">public class StrategyPractice {
+    public static void main(String[] args) {
+        int x = 1;
+        int y = 2;
+
+        int z = x;
+        x = y;
+        y = z;
+
+        printSum(x, y);
+        System.out.println("Bye!");
+    }
+
+    public static void printSum(int a, int b) {
+        System.out.println(a + b);
+    }
+}</div>
+                </div>
+                </td></table>
+                
+            </div>
+
+            <div class="col-xs-6 col-md-6">
+                <div class="container" style="width:700px; padding: 0px;">
+                    <div id="exTab1" class="container" style="padding: 0px"> 
+                        <ul class="nav nav-pills">
+                            <li class="active" id="tab1">
+                                <a href="#1a" data-toggle="tab">Method: 
+                                    <div data-silex-type="ctat" class="CTATTextInput" data-ctat-enabled="true" id="method1"></div>
+                                </a>
+                            </li>
+                            <li id="tab2">
+                                <a href="#2a" data-toggle="tab">Method:
+                                    <div data-silex-type="ctat" class="CTATTextInput" data-ctat-enabled="true" id="method2"></div>
+                                </a>
+                            </li>
+                            <li id="tab3">
+                                <a href="#3a" data-toggle="tab">Method:
+                                    <div data-silex-type="ctat" class="CTATTextInput" data-ctat-enabled="true" id="method3"></div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content clearfix">
+                            <div class="tab-pane active" id="1a">
+                                <table>
+                                    <tr>
+                                        <th>Name</th><th>Value</th>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n1-1"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v1-1"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n1-2"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v1-2"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n1-3"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v1-3"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n1-4"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v1-4"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Return</td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="ret1"></div></td>
+                                    </tr>
+                                </table> 
+                                <div id="done1" class="CTATButton">Done with table</div>
+                                <div id="new1" class="CTATButton">New method</div>
+                            </div>
+                            <div class="tab-pane" id="2a" style="display:hidden">
+                                <table>
+                                    <tr>
+                                        <th>Name</th><th>Value</th>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n2-1"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v2-1"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n2-2"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v2-2"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n2-3"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v2-3"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n2-4"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v2-4"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Return</td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="ret2"></div></td>
+                                    </tr>
+                                </table> 
+                                <div id="done2" class="CTATButton">Done with table</div>
+                                <div id="new2" class="CTATButton">New method</div>
+                            </div>
+                            <div class="tab-pane" id="3a" style="display:hidden">
+                                <table>
+                                    <tr>
+                                        <th>Name</th><th>Value</th>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n3-1"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v3-1"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n3-2"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v3-2"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n3-3"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v3-3"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="CTATTextInput" id="n3-4"></div></td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="v3-4"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Return</td>
+                                        <td><div class="CTATTextInput" data-ctat-disable-on-correct="false" id="ret3"></div></td>
+                                    </tr>
+                                </table> 
+                                <div id="done3" class="CTATButton">Done with table</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br/>
+
+                    <!--Output-->
+                    <div class="output">
+                        Output
+                        <br/>
+                        <div class="outputGroup">
+                            <span class="CTATTextField" id="tf_output1">1: </span><div class="outputLine CTATTextInput" id="output1"></div>
+                        </div>
+
+                        <div class="outputGroup">
+                            <span class="CTATTextField" id="tf_output2">2: </span><div class="outputLine CTATTextInput" id="output2"></div>
+                        </div>
+
+                        <div class="outputGroup">
+                            <span class="CTATTextField" id="tf_output3">3: </span><div class="outputLine CTATTextInput" id="output3"></div>
+                        </div>
+
+                        <!--Groupings-->
+                        <div id="outputGroup2" class="CTATGroupingComponent"
+                             data-ctat-componentlist="tf_output2, output2">
+                        </div>
+
+                        <div id="outputGroup3" class="CTATGroupingComponent"
+                             data-ctat-componentlist="tf_output3, output3">
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <table>
+                    <tr>
+                        <td width="250px"><div id="hintwindow" class="CTATHintWindow"></div></td>
+                        <td width="80px">
+                            <div data-silex-type="ctat" id="hint" class="CTATHintButton editable-style silex-id-1499794868504-10 CTATComponent" data-silex-id="silex-id-1499794868504-10" data-ctat-component="CTATHintButton" data-ctat-enabled="true"></div>
+                        </td><td width="80px">
+                        <div data-silex-type="ctat" id="done" class="CTATDoneButton editable-style silex-id-1499794862881-9 CTATComponent" data-silex-id="silex-id-1499794862881-9" data-ctat-component="CTATDoneButton" data-ctat-enabled="true"></div>
+                    </td width="280px">
+                    </tr></table>
+
+            </div>
+            
+
+
+</div>       
+</div> 
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" 
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous">
+</script>
+<script src="js/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<script src="js/script.js"></script>
+
+</body></html>
+
