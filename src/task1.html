@@ -12,6 +12,14 @@
   li, ul {list-style-type: square}
 
   .ace_editor .ace_marker-layer .ace_active-line {background: #2ECC71 !important;}
+
+    .tab-pane {
+    background-color: #bfcdde !important;
+    }
+  .nav>li>a {
+    background-color: #bfcdde !important;
+    color: black;
+    }
 </style>
 
 <!-- Silex -->
@@ -47,6 +55,7 @@
 
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div>
+                <h4>Instructions</h4>
                     Run the code like a computer, fill in the intermediate values for all variables, and enter the output.
 
                     <br><br>
@@ -75,7 +84,8 @@
             </div>
 
             <div class="col-xs-6 col-md-6">
-                <div class="container" style="width:700px; padding: 0px;">
+                <h4>Variables</h4>
+                <div class="container" style="width:600px; padding: 0px;">
                     <div id="exTab1" class="container" style="padding: 0px"> 
                         <ul class="nav nav-pills">
                             <li class="active" id="tab1">
@@ -189,8 +199,8 @@
 
                     <!--Output-->
                     <div class="output">
-                        Output
-                        <br/>
+                        <h4>Output</h4>
+
                         <div class="outputGroup">
                             <span class="CTATTextField" id="tf_output1">1: </span><div class="outputLine CTATTextInput" id="output1"></div>
                         </div>
@@ -213,12 +223,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <br/> <br/>
-            <div>
+
+                <br/> 
+                <h4>Hints</h4>
                 <table>
                     <tr>
-                        <td><div id="hintwindow" class="CTATHintWindow"></div></td>
+                        <td width="250px"><div id="hintwindow" class="CTATHintWindow"></div></td>
                         <td width="80px">
                             <div data-silex-type="ctat" id="hint" class="CTATHintButton editable-style silex-id-1499794868504-10 CTATComponent" data-silex-id="silex-id-1499794868504-10" data-ctat-component="CTATHintButton" data-ctat-enabled="true"></div>
                         </td><td width="80px">
