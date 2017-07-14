@@ -23,6 +23,7 @@
 <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/normalize.css" rel="stylesheet">
 <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/html-editor/css/silex/front-end.css" rel="stylesheet">
 <link data-silex-static="true" href="https://cdn.ctat.cs.cmu.edu/releases/latest/CTAT.css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="style.css">
 <!--JS-->
 <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery.js"></script>
 <script data-silex-static="true" type="text/javascript" src="https://cdn.ctat.cs.cmu.edu/html-editor/js/jquery-ui.js"></script>
@@ -31,7 +32,6 @@
 
 <style type="text/css" class="silex-style"></style>
 
-
 </head>
 
 <body class="body-initial prevent-draggable silex-runtime silex-published">
@@ -39,8 +39,11 @@
     <div class="container">
 
         <div class="page-header">
-            <h2 style="font-weight: bold">napt (Not Another Programming Tutor)</h2>
-            <h5><small>LearnLab Summerschool 2017, Benjamin & Hieke</small></h5>
+            <h2 style="font-weight: bold">Not Another Programming (NAP) Tutor</h2>
+            <h5><small>LearnLab Summer School 2017,
+                <a href="http://www.benjixie.com" target="_blank">Benjamin Xie</a> &
+                <a href="https://scholar.google.com/citations?user=nB5EHuwAAAAJ" target="_blank">Hieke Keuning</a>
+            </small></h5>
         </div>
 
         <div class="row">
@@ -76,8 +79,9 @@
 
             <div class="col-xs-6 col-md-6">
                 <div class="container" style="width:700px; padding: 0px;">
-                    <div id="exTab1" class="container" style="padding: 0px"> 
-                        <ul class="nav nav-pills">
+                    <h2>Variable Tables</h2>
+                    <div id="tabs" class="container" style="padding: 0px">
+                        <ul class="nav nav-tabs">
                             <li class="active" id="tab1">
                                 <a href="#1a" data-toggle="tab">Method: 
                                     <div data-silex-type="ctat" class="CTATTextInput" data-ctat-enabled="true" id="method1"></div>
@@ -185,12 +189,11 @@
                         </div>
                     </div>
 
-                    <br/>
+                    <hr/>
 
                     <!--Output-->
                     <div class="output">
-                        Output
-                        <br/>
+                        <h2>Output</h2>
                         <div class="outputGroup">
                             <span class="CTATTextField" id="tf_output1">1: </span><div class="outputLine CTATTextInput" id="output1"></div>
                         </div>
@@ -214,9 +217,9 @@
                     </div>
                 </div>
             </div>
-            <br/> <br/>
+
             <div>
-                <table>
+                <table class="space-above">
                     <tr>
                         <td><div id="hintwindow" class="CTATHintWindow"></div></td>
                         <td width="80px">
@@ -224,7 +227,8 @@
                         </td><td width="80px">
                         <div data-silex-type="ctat" id="done" class="CTATDoneButton editable-style silex-id-1499794862881-9 CTATComponent" data-silex-id="silex-id-1499794862881-9" data-ctat-component="CTATDoneButton" data-ctat-enabled="true"></div>
                     </td width="280px">
-                    </tr></table>
+                    </tr>
+                </table>
             </div>
 
 
